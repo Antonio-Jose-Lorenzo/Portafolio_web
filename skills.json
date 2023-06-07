@@ -1,52 +1,35 @@
 [
     {
-        "name": "Android",
-        "icon": "https://img.icons8.com/fluency/48/000000/android-os.png"
+        "name": "Linux",
+        "icon": "https://img.icons8.com/color/96/000000/linux--v1.png"
     },
     {
-        "name": "Flutter",
-        "icon": "https://img.icons8.com/fluency/48/000000/flutter.png"
+        "name": "Mysql",
+        "icon": "https://img.icons8.com/fluency/96/mysql-logo.png"
     },
     {
-        "name": "iOS",
-        "icon": "https://img.icons8.com/fluency/48/000000/mac-os.png"
+        "name": "Docker",
+        "icon": "https://img.icons8.com/color/96/docker.png"
     },
     {
-        "name": "Firebase",
-        "icon": "https://img.icons8.com/color/48/000000/firebase.png"
+        "name": "Bash",
+        "icon": "https://img.icons8.com/fluency/96/000000/bash.png"
     },
     {
-        "name": "MaterialUI",
-        "icon": "https://img.icons8.com/color/48/000000/material-ui.png"
+        "name": "OracleSQL",
+        "icon": "https://img.icons8.com/color/96/000000/oracle-logo.png"
     },
     {
-        "name": "Dart",
-        "icon": "https://img.icons8.com/color/48/000000/dart.png"
+        "name": "Python",
+        "icon": "https://img.icons8.com/color/96/python--v1.png"
     },
     {
-        "name": "Java",
-        "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"
+        "name": "JavaScript",
+        "icon": "https://img.icons8.com/fluency/96/javascript.png"
     },
     {
-        "name": "Kotlin",
-        "icon": "https://img.icons8.com/color/48/000000/kotlin.png"
-    },
-   
-    {
-        "name": "C++",
-        "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
-    },
-    {
-        "name": "AWS",
-        "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
-    },    
-    {
-        "name": "Google Cloud",
-        "icon": "https://img.icons8.com/color/48/000000/google-cloud.png"
-    },
-    {
-        "name": "Git VCS",
-        "icon": "https://img.icons8.com/color/48/000000/git.png"
+        "name": "PostgreSQL",
+        "icon": "https://img.icons8.com/plasticine/96/000000/postgreesql.png"
     },
     {
         "name": "GitHub",
