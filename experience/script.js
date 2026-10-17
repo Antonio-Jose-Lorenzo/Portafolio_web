@@ -1,62 +1,45 @@
 $(document).ready(function(){
+    const menuButton = $('#menu');
+    const navbar = $('.navbar');
 
-    $('#menu').click(function(){
-        $(this).toggleClass('fa-times');
-        $('.navbar').toggleClass('nav-toggle');
+    function closeMenu() {
+        menuButton
+            .removeClass('fa-times')
+            .addClass('fa-bars')
+            .attr('aria-expanded', 'false')
+            .attr('aria-label', window.PortfolioLanguage?.t('menu-open') || 'Open navigation menu');
+        navbar.removeClass('nav-toggle');
+    }
+
+    menuButton.on('click', function(){
+        const isOpen = $(this).attr('aria-expanded') !== 'true';
+        $(this)
+            .toggleClass('fa-times', isOpen)
+            .toggleClass('fa-bars', !isOpen)
+            .attr('aria-expanded', String(isOpen))
+            .attr('aria-label', window.PortfolioLanguage?.t(isOpen ? 'menu-close' : 'menu-open') ||
+                (isOpen ? 'Close navigation menu' : 'Open navigation menu'));
+        navbar.toggleClass('nav-toggle', isOpen);
     });
 
-    $(window).on('scroll load',function(){
-        $('#menu').removeClass('fa-times');
-        $('.navbar').removeClass('nav-toggle');
-
-        if(window.scrollY>60){
-            document.querySelector('#scroll-top').classList.add('active');
-        }else{
-            document.querySelector('#scroll-top').classList.remove('active');
+    navbar.find('a').on('click', closeMenu);
+    $(document).on('keydown', function (event) {
+        if (event.key === 'Escape') {
+            closeMenu();
         }
     });
+    $(document).on('click', function (event) {
+        if (
+            navbar.hasClass('nav-toggle') &&
+            !navbar[0].contains(event.target) &&
+            !menuButton[0].contains(event.target)
+        ) {
+            closeMenu();
+        }
+    });
+    $(window).on('scroll load',function(){
+        $('#scroll-top').toggleClass('active', window.scrollY > 60);
+    });
 });
 
-/* ===== SCROLL REVEAL ANIMATION ===== */
-const srtop = ScrollReveal({
-    origin: 'top',
-    distance: '80px',
-    duration: 1000,
-    reset: true
-});
-
-/* SCROLL EXPERIENCE */
-srtop.reveal('.experience .timeline',{delay: 400});
-srtop.reveal('.experience .timeline .container',{interval: 400}); 
-
-
-// disable developer mode
-document.onkeydown = function(e) {
-  if(e.keyCode == 123) {
-     return false;
-  }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-     return false;
-  }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-     return false;
-  }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-     return false;
-  }
-  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-     return false;
-  }
-}
-
-document.addEventListener('visibilitychange',
-function(){
-    if(document.visibilityState === "visible"){
-        document.title = "Experience | Antonio jose lorenzo";
-        $("#favicon").attr("href","/assets/images/favicon.png");
-    }
-    else {
-        document.title = "Come Back To Portfolio";
-        $("#favicon").attr("href","/assets/images/favhand.png");
-    }
-});
+// Keep every experience card visible immediately instead of hiding it behind an animation.

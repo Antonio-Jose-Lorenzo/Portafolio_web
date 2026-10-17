@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-title-key="title-projects">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,37 +7,41 @@
     <link rel="stylesheet" href="./style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link id='favicon' rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-png">
-    <title>Projects | Portfolio Antonio Jose Lorenzo Pathan</title>
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+    <title>Projects | Antonio Jose Lorenzo</title>
 </head>
-<body oncontextmenu="return false">
+<body>
 
 <!-- navbar starts -->
 <header>
         <a href="/" class="logo"><i class="fab fa-dev"></i> Antonio Jose Lorenzo</a>
 
-        <div id="menu" class="fas fa-bars"></div>
-        <nav class="navbar">
+        <nav class="navbar" id="site-navigation" aria-label="Main navigation">
             <ul>
-            <li><a href="/#home">Home</a></li>
-            <li><a href="/#about">About</a></li>
-            <li><a href="/#skills">Skills</a></li>
-            <li><a href="/#education">Education</a></li>
-            <li><a class="active" href="/#work">Work</a></li>
-            <li><a href="/#experience">Experience</a></li>
-            <li><a href="/#contact">Contact</a></li>
+            <li><a href="/#home" data-i18n="nav-home">Home</a></li>
+            <li><a href="/#about" data-i18n="nav-about">About</a></li>
+            <li><a href="/#skills" data-i18n="nav-skills">Skills</a></li>
+            <li><a href="/#certifications" data-i18n="nav-certifications">Certifications</a></li>
+            <li><a href="/#education" data-i18n="nav-education">Education</a></li>
+            <li><a class="active" href="/#work" data-i18n="nav-work">Work</a></li>
+            <li><a href="/#experience" data-i18n="nav-experience">Experience</a></li>
+            <li><a href="/#contact" data-i18n="nav-contact">Contact</a></li>
             </ul>
         </nav>
+        <div class="header-actions">
+          <button id="menu" class="fas fa-bars" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation"></button>
+          <button id="language-toggle" class="language-toggle" type="button" aria-label="Switch to Spanish" title="Switch to Spanish"><span>ES</span></button>
+        </div>
 </header>
 <!-- navbar ends -->
 
 <!-- work project section starts -->
 <section class="work" id="work">
 
-  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+  <h1 class="heading"><i class="fas fa-laptop-code"></i> <span data-i18n="projects-page-heading">My Projects</span></h1>
   
   <div id="filters" class="button-group">
-    <button class="btn is-checked" data-filter="*">All Projects</button>
+    <button class="btn is-checked" data-filter="*" data-i18n="projects-filter-all">All Projects</button>
     <!--button class="btn" data-filter=".mern">MERN Stack</button>
     <button class="btn" data-filter=".lamp">LAMP Stack</button>
     <button class="btn" data-filter=".basicweb">Basic Web</button>
@@ -67,7 +71,7 @@
   <div class="backbtn">
     <a href="/#work" class="btn">
         <i class="fas fa-arrow-left"></i>
-        <span>Back to Home</span>
+        <span data-i18n="experience-back">Back to Home</span>
   </a>
   </div>
 
@@ -83,17 +87,12 @@
 <!-- jquery cdn -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<!-- vanilla tilt.js links -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- scroll reveal anim -->
-<script src="https://unpkg.com/scrollreveal"></script>
-
 <!-- isotope filter plugin cdn -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
+<script src="/assets/js/language.js"></script>
 <script src="./script.js"></script>
 
 </body>
