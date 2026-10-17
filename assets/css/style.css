@@ -665,6 +665,8 @@ header .navbar ul li a:hover {
   margin: 2rem auto 0;
 }
 .certification-list {
+  flex: 1 1 0;
+  min-width: 0;
   display: flex;
   gap: 1.6rem;
   overflow-x: auto;
@@ -676,7 +678,7 @@ header .navbar ul li a:hover {
 }
 .certificate-card {
   display: flex;
-  flex: 0 0 min(100%, 58rem);
+  flex: 0 0 100%;
   flex-direction: column;
   min-width: 0;
   overflow: hidden;
