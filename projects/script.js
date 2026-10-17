@@ -95,7 +95,7 @@ function showProjects(projects) {
     container.innerHTML = validProjects.map(project => `
         <div class="grid-item ${escapeHTML(project.category)}">
           <article class="box tilt">
-            ${project.image ? `<img draggable="false" src="/assets/images/projects/${escapeHTML(project.image)}.png" alt="" loading="lazy" />` : ''}
+            ${project.image ? `<img draggable="false" src="../assets/images/projects/${escapeHTML(project.image)}.png" alt="" loading="lazy" />` : ''}
             <div class="content">
               <div class="tag"><h3>${escapeHTML(project[`name_${language}`] || project.name)}</h3></div>
               <div class="desc">
